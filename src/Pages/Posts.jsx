@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate,} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const url = "https://api.github.com/users";
@@ -11,16 +11,13 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-        try{
-            const response = await axios.get(url);
-            setUser(response.data);
-            console.log(response);
-            
-
-        }catch(error){
-            console.log(error);
-            
-        }
+      try {
+        const response = await axios.get(url);
+        setUser(response.data);
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchData();
   }, []);
@@ -47,7 +44,7 @@ function App() {
                 borderRadius: "10px",
                 padding: "5px",
               }}
-              onClick={() => navigate("/Post")}
+              onClick={() => navigate(`/post/${id}`)}
             >
               Click
             </button>
