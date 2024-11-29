@@ -3,18 +3,18 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const url = "https://api.github.com/users/1";
+const url = "https://api.github.com/users";
 
 const Post = () => {
   const navigate = useNavigate();
-  cont[(data, setData)] = useState(null);
+  const { id } = useParams();
 
   const [post, setPost] = useState(null);
 
   useEffect(() => {
     const dataFetched = async () => {
       try {
-        const response = await axios.get(url);
+        const response = await axios.get(`${url}/${id}`);
         setPost(response.data);
       } catch (error) {
         console.log(error);
