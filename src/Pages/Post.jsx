@@ -9,7 +9,7 @@ const Post = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   // 4455555
-  cont [data, setData]= useState({})
+  
 
   const [post, setPost] = useState(null);
 
