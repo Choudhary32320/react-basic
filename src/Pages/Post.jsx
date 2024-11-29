@@ -4,12 +4,10 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const url = "https://api.github.com/users";
-
+// save changes
 const Post = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-  // 4455555
-  cont [data, setData]= useState({})
 
   const [post, setPost] = useState(null);
 
@@ -69,7 +67,7 @@ const Post = () => {
             background: "red",
             margin: "10px",
           }}
-          onClick={() => navigate("/Posts")}
+          onClick={() => navigate("/")}
         >
           Back
         </button>
