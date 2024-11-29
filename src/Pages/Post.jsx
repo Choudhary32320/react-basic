@@ -7,6 +7,7 @@ const url = "https://api.github.com/users/1";
 
 const Post = () => {
   const navigate = useNavigate();
+  cont[(data, setData)] = useState(null);
 
   const [post, setPost] = useState(null);
 
